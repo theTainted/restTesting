@@ -10,7 +10,7 @@ public class RestAssuredConfig {
     @BeforeSuite(alwaysRun=true)
 
     public void configure(){
-        RestAssured.baseURI="http://t2.mobile.fleurametz.com";
+        RestAssured.baseURI="http://t2.mobile.fleurametz.com/{languageISO}";
 
         RestAssured.basePath= "/mobile-api/v1/";
             }
