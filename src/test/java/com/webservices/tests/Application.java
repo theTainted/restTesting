@@ -31,7 +31,8 @@ public class Application {
     @Test(groups = "demo")
     public void validateApplication3() {
         // System.out.println(given().get(EndPoint.GET_APPLICATION));
-        given().pathParam("languageISO", "nl-NL").when().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
+        System.out.println(EndPoint.GET_APPLICATION);
+        given().pathParams("languageISO","nl-NL").when().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
 
     }
 }
