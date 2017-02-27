@@ -12,6 +12,6 @@ public class RestAssuredConfig {
     public void configure(){
         RestAssured.baseURI="http://t2.mobile.fleurametz.com";
 
-        RestAssured.basePath= "mobile-api/v1/";
-    }
+        RestAssured.basePath= "/mobile-api/v1/";
+            }
 }
