@@ -1,18 +1,19 @@
 package com.webservices.framework;
 
 import io.restassured.RestAssured;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 /**
  * Created by syam.suryanarayanan on 2/27/2017.
  */
 public class RestAssuredConfig {
-    @BeforeSuite(alwaysRun=true)
+@BeforeSuite(alwaysRun = true)
 
     public void configure(){
         RestAssured.baseURI="http://t2.mobile.fleurametz.com/{languageISO}";
 
-        RestAssured.basePath= "/mobile-api/v1/";
+        RestAssured.basePath= "/mobile-api/v1";
             }
   /*  public String baseURL="http://t2.mobile.fleurametz.com";
     public String locale="/nl-NL";
