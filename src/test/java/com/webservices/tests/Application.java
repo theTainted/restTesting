@@ -1,5 +1,6 @@
 package com.webservices.tests;
 
+import com.webservices.framework.RestAssuredConfig;
 import com.webservices.tests.common.EndPoint;
 import org.testng.annotations.Test;
 
@@ -14,9 +15,18 @@ public class Application {
         given().get("http://t2.mobile.fleurametz.com/nl-NL/mobile-api/v1/application?contextId=4999").then().statusCode(200).log().all();
     }
 
-    @Test(groups="demo")
+  /*  @Test(groups="demo")
     public void validateApplication2(){
+        System.out.println(given().get(EndPoint.GET_APPLICATION));
         given().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
 
+    }*/
+@Test
+    public void validateApplication2(){
+        RestAssuredConfig RestAssuredConfiguration = new RestAssuredConfig();
+        String testEndPoint= RestAssuredConfiguration.baseURL+RestAssuredConfiguration.locale+RestAssuredConfiguration.apiVersion+RestAssuredConfiguration.endPointNameApplication;
+        given().get(testEndPoint).then().statusCode(200).log().all();
+
     }
+
 }
