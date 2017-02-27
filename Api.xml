@@ -1,12 +1,9 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Example test run">
-<test name="Simple Test">
-    <classes>
-
-
-        <class name ="com.webservices.tests.Application"/>
-
-    </classes>
-</test>
+<suite name="Suite" parallel="false">
+    <test name="Test1">
+        <classes>
+            <class name="com.webservices.tests.Application" />
+        </classes>
+    </test>
 </suite>

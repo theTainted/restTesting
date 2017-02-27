@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
  * Created by syam.suryanarayanan on 2/27/2017.
  */
 public class Application {
- /*   @Test
+/*  @Test
     public void validateApplication() {
         given().get("http://t2.mobile.fleurametz.com/nl-NL/mobile-api/v1/application?contextId=4999").then().statusCode(200).log().all();
     }*/
@@ -21,18 +21,12 @@ public class Application {
             given().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
 
         }*/
-/*@Test
+@Test
     public void validateApplication2(){
         RestAssuredConfig RestAssuredConfiguration = new RestAssuredConfig();
         String testEndPoint= RestAssuredConfiguration.baseURL+RestAssuredConfiguration.locale+RestAssuredConfiguration.apiVersion+RestAssuredConfiguration.endPointNameApplication;
         given().get(testEndPoint).then().statusCode(200).log().all();
 
-    }*/
-    @Test(groups = "demo")
-    public void validateApplication3() {
-        // System.out.println(given().get(EndPoint.GET_APPLICATION));
-        System.out.println(EndPoint.GET_APPLICATION);
-        given().pathParams("languageISO","nl-NL").when().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
-
     }
+
 }
