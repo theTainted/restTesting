@@ -21,13 +21,18 @@ public class Application {
            // given().pathParam("languageISO","nl-NL").get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
         given().when().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
 
-     }*/
+     }
 @Test
     public void validateApplication2(){
         RestAssuredConfig RestAssuredConfiguration = new RestAssuredConfig();
         String testEndPoint= RestAssuredConfiguration.baseURL+RestAssuredConfiguration.locale+RestAssuredConfiguration.apiVersion+RestAssuredConfiguration.endPointNameApplication;
         given().get(testEndPoint).then().statusCode(200).log().all();
 
-    }
-
+    }*/
+@Test(groups="demo")
+    public void validateApllicationWithQueryParameterContextID(){
+    RestAssuredConfig RestAssuredConfiguration = new RestAssuredConfig();
+    String testEndPoint= RestAssuredConfiguration.baseURL+RestAssuredConfiguration.locale+RestAssuredConfiguration.apiVersion+RestAssuredConfiguration.endPointNameApplication;
+    given().queryParam("contextID","4999").get(testEndPoint).then().statusCode(200).log().all();
+}
 }
