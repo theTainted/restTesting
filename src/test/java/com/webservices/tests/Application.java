@@ -15,12 +15,13 @@ public class Application {
         given().get("http://t2.mobile.fleurametz.com/nl-NL/mobile-api/v1/application?contextId=4999").then().statusCode(200).log().all();
     }*/
 
-    /* @Test(groups="demo")
+ /*    @Test(groups="demo")
         public void validateApplication2(){
-           // System.out.println(given().get(EndPoint.GET_APPLICATION));
-            given().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
+            System.out.println(EndPoint.GET_APPLICATION);
+           // given().pathParam("languageISO","nl-NL").get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
+        given().when().get(EndPoint.GET_APPLICATION).then().statusCode(200).log().all();
 
-        }*/
+     }*/
 @Test
     public void validateApplication2(){
         RestAssuredConfig RestAssuredConfiguration = new RestAssuredConfig();
